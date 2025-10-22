@@ -1,7 +1,7 @@
 // ketika di klik luar hamburger menu
 document.addEventListener("click", function (e) {
-  if (!menu.contains(e.target) && !navbarHome.contains(e.target)) {
-    navbarHome.classList.remove("active");
+  if (!menu.contains(e.target) && !navHome.contains(e.target)) {
+    navHome.classList.remove("active");
   }
 });
 
@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 30) {
-    navbar.classList.add("scrolled"); 
+    navbar.classList.add("scrolled");
   } else {
-    navbar.classList.remove("scrolled"); 
+    navbar.classList.remove("scrolled");
   }
 });
 
@@ -48,19 +48,31 @@ const navbar = document.querySelector(".navbar");
 const navHome = document.querySelector(".navbar-home");
 const overlay = document.querySelector(".overlay");
 
-
 if (menuBtn && navbar && navHome && overlay) {
   menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");    
-    navbar.classList.toggle("active");     
-    navHome.classList.toggle("active");    
-    overlay.classList.toggle("active");    
+    menuBtn.classList.toggle("active");
+    navbar.classList.toggle("active");
+    navHome.classList.toggle("active");
+    overlay.classList.toggle("active");
   });
 
   overlay.addEventListener("click", () => {
-    menuBtn.classList.remove("active");    
+    menuBtn.classList.remove("active");
     navbar.classList.remove("active");
     navHome.classList.remove("active");
     overlay.classList.remove("active");
   });
 }
+
+const mainWa = document.getElementById("main-wa");
+const waOptions = document.querySelector(".wa-options");
+
+mainWa.addEventListener("click", () => {
+  waOptions.classList.toggle("active");
+});
+
+document.addEventListener("click", function (e) {
+  if (!main - wa.contains(e.target) && !wa - options.contains(e.target)) {
+    wa - options.classList.remove("active");
+  }
+});
